@@ -94,44 +94,19 @@
         );
 
         // --- MOCK DATA ---
-        const INITIAL_ALBUMS = [
-            {
-                id: 1,
-                title: "Project Alpha Blueprints",
-                cover: "https://images.unsplash.com/photo-1581094794329-cd11965d15b5?auto=format&fit=crop&q=80&w=600",
-                count: 4,
-                images: [
-                    "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1581092334651-ddf26f9a09d0?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800"
-                ]
-            },
-            {
-                id: 2,
-                title: "Confidential Site Photos",
-                cover: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600",
-                count: 3,
-                images: [
-                    "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&q=80&w=800"
-                ]
-            },
-            {
-                id: 3,
-                title: "Internal Event 2024",
-                cover: "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=600",
-                count: 5,
-                images: [
-                    "https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=800",
-                    "https://images.unsplash.com/photo-1514525253440-b393452e3383?auto=format&fit=crop&q=80&w=800"
-                ]
-            }
-        ];
+        // Generates 30 "Code Tantra Solution" folders automatically
+        const INITIAL_ALBUMS = Array.from({ length: 30 }, (_, i) => ({
+            id: i + 1,
+            title: `Code Tantra Solution ${i + 1}`,
+            cover: "https://images.unsplash.com/photo-1587620962725-abab7fe55159?auto=format&fit=crop&q=80&w=600", // Tech/Code background
+            count: Math.floor(Math.random() * 10) + 2, // Random file count between 2 and 12
+            images: [
+                "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800",
+                "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800",
+                "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&q=80&w=800",
+                "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&q=80&w=800"
+            ]
+        }));
 
         // --- UTILS ---
         const DEMO_API_KEY = "AIzaSyDaBc2BkIaYh7FfnQfC_oxqHLR7hmrgPHA";
